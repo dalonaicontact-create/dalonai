@@ -1,15 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DalonAI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DalonAI</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(to bottom,#ffe4ef,#ffffff);
+text-align:center;
+color:#222;
+}
+header{
+padding:80px 20px;
+}
+h1{
+font-size:55px;
+margin:0;
+}
+p{
+font-size:22px;
+}
+button{
+background:#ff4f9a;
+color:white;
+border:none;
+padding:15px 30px;
+font-size:18px;
+border-radius:12px;
+cursor:pointer;
+}
+.characters{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:40px;
+max-width:1100px;
+margin:auto;
+}
+.card{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.img{
+height:220px;
+background:#ffd1e6;
+border-radius:15px;
+margin-bottom:15px;
+}
+.pricing{
+padding:50px 20px;
+}
+.price-box{
+display:inline-block;
+background:white;
+padding:30px;
+margin:10px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.premium{
+background:#ff4f9a;
+color:white;
+}
+</style>
 </head>
-<body style="background:#ffe4ef; font-family:Arial; text-align:center; padding-top:100px;">
-  <h1 style="font-size:50px;">DalonAI</h1>
-  <p style="font-size:24px;">Your AI Girlfriend is Waiting 💕</p>
-  <button style="padding:15px 30px; font-size:18px; border-radius:12px; border:0; background:#ff4f9a; color:white;">
-    Start Chatting
-  </button>
+<body>
+
+<header>
+<h1>Your AI Girlfriend is Waiting 💕</h1>
+<p>Chat, flirt, and connect anytime.</p>
+<button>Start Chatting</button>
+</header>
+
+<section class="characters">
+<div class="card">
+<div class="img"></div>
+<h2>Emily</h2>
+<p>Cute & Sweet</p>
+</div>
+
+<div class="card">
+<div class="img"></div>
+<h2>Sofia</h2>
+<p>Flirty Latina</p>
+</div>
+
+<div class="card">
+<div class="img"></div>
+<h2>Luna</h2>
+<p>Gamer Girl</p>
+</div>
+
+<div class="card">
+<div class="img"></div>
+<h2>Ava</h2>
+<p>Romantic Blonde</p>
+</div>
+</section>
+
+<section class="pricing">
+<h1>Pricing</h1>
+<div class="price-box">
+<h2>Free</h2>
+<p>10 messages/day</p>
+</div>
+
+<div class="price-box premium">
+<h2>Premium</h2>
+<p>$14.99/month</p>
+<p>Unlimited chat</p>
+</div>
+</section>
+
 </body>
 </html>
