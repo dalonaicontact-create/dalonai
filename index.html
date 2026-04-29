@@ -126,13 +126,33 @@ color:white;
 
 <div style="max-width:500px; margin:auto; background:white; border-radius:20px; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:left;">
 
+  <div id="chatMessages">
 <p><b>You:</b> Hey 👋</p>
 <p><b>DalonAI 💕:</b> Hey handsome 😘 I missed you...</p>
+  </div>
 
-<input type="text" placeholder="Type your message..." style="width:70%; padding:12px; border-radius:10px; border:1px solid #ccc;">
-<button>Send</button>
+<input id="userInput" type="text" placeholder="Type your message..." style="width:70%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+<button onclick="sendMessage()">Send</button>
 
 </div>
 </section>
+  <script>
+function sendMessage() {
+  let input = document.getElementById("userInput");
+  let message = input.value;
+
+  if(message.trim() === "") return;
+
+  let chatBox = document.getElementById("chatMessages");
+
+  chatBox.innerHTML += "<p><b>You:</b> " + message + "</p>";
+
+  setTimeout(() => {
+    chatBox.innerHTML += "<p><b>DalonAI 💕:</b> You’re so sweet 😘 Tell me more...</p>";
+  }, 800);
+
+  input.value = "";
+}
+</script>
 </body>
 </html>
