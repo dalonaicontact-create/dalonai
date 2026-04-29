@@ -108,7 +108,7 @@ color:white;
 </div>
 </section>
 
-<section class="pricing">
+<section class="pricing" id="pricing">
 <h1>Pricing</h1>
 <div class="price-box">
 <h2>Free</h2>
@@ -150,7 +150,7 @@ function sendMessage() {
   messageCount++;
 
 if(messageCount >= 5){
-  chatBox.innerHTML += "<p><b>DalonAI 💎:</b> Upgrade to Premium to continue chatting 💕</p><button>Upgrade Now 💎</button>";
+chatBox.innerHTML += "<p><b>DalonAI 💎:</b> Upgrade to Premium to continue chatting 💕</p><a href='#pricing'><button>Upgrade Now 💎</button></a>";
   return;
 }
 
