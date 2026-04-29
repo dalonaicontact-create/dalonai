@@ -131,7 +131,7 @@ color:white;
 <p><b>DalonAI 💕:</b> Hey handsome 😘 I missed you...</p>
   </div>
 
-<input id="userInput" type="text" placeholder="Type your message..." style="width:70%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+<input id="userInput" type="text" placeholder="Type your message..." onkeydown="if(event.key === 'Enter'){sendMessage();}" style="width:70%; padding:12px; border-radius:10px; border:1px solid #ccc;">
 <button onclick="sendMessage()">Send</button>
 
 </div>
