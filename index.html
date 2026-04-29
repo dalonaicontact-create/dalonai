@@ -137,6 +137,7 @@ color:white;
 </div>
 </section>
   <script>
+    let messageCount = 0;
 function sendMessage() {
   let input = document.getElementById("userInput");
   let message = input.value;
@@ -146,6 +147,12 @@ function sendMessage() {
   let chatBox = document.getElementById("chatMessages");
 
   chatBox.innerHTML += "<p><b>You:</b> " + message + "</p>";
+  messageCount++;
+
+if(messageCount >= 5){
+  chatBox.innerHTML += "<p><b>DalonAI 💎:</b> Upgrade to Premium to continue chatting 💕</p>";
+  return;
+}
 
   setTimeout(() => {
    let replies = [
