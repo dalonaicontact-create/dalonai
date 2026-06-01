@@ -245,8 +245,13 @@ chatBox.innerHTML += "<div class='ai-row'><img class='chat-avatar' src='" + curr
   chatBox.scrollTop = chatBox.scrollHeight;
   return;
 }
+let typingId = "typing-" + Date.now();
 
+chatBox.innerHTML += "<div id='" + typingId + "' class='ai-row'><img class='chat-avatar' src='" + currentGirl + ".jpeg'><div class='ai-msg'><i>" + currentGirl + " is typing...</i></div></div>";
+
+chatBox.scrollTop = chatBox.scrollHeight;
   setTimeout(() => {
+    document.getElementById(typingId).remove();
    let replies = [
   "Aww, you’re making me smile 😘",
   "I like talking to you… tell me more 💕",
