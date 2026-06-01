@@ -83,28 +83,28 @@ color:white;
 <img class="img" src="Emily.jpeg" />
 <h2>Emily</h2>
 <p>Cute & Sweet</p>
-  <a href="#chat"><button>Chat with Emily</button></a>
+  <a href="#chat" onclick="currentGirl='Emily'"><button>Chat with Emily</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Sofia.jpeg" />
 <h2>Sofia</h2>
 <p>Flirty Latina</p>
-  <a href="#chat"><button>Chat with Sofia</button></a>
+<a href="#chat" onclick="currentGirl='Sofia'"><button>Chat with Sofia</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Luna.jpeg" />
 <h2>Luna</h2>
 <p>Gamer Girl</p>
-  <a href="#chat"><button>Chat with Luna</button></a>
+  <a href="#chat" onclick="currentGirl='Luna'"><button>Chat with Luna</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Ava.jpeg" />
 <h2>Ava</h2>
 <p>Romantic Blonde</p>
-  <a href="#chat"><button>Chat with Ava</button></a>
+  <a href="#chat" onclick="currentGirl='Ava'"><button>Chat with Ava</button></a>
 </div>
 </section>
 
@@ -137,6 +137,7 @@ color:white;
 </div>
 </section>
   <script>
+    let currentGirl = "Emily";
     let messageCount = 0;
 function sendMessage() {
   let input = document.getElementById("userInput");
@@ -166,7 +167,7 @@ chatBox.innerHTML += "<p><b>DalonAI 💎:</b> Upgrade to Premium to continue cha
 
 let randomReply = replies[Math.floor(Math.random() * replies.length)];
 
-chatBox.innerHTML += "<p><b>DalonAI 💕:</b> " + randomReply + "</p>";
+chatBox.innerHTML += "<p><b>" + currentGirl + ":</b> " + randomReply + "</p>";
   }, 800);
 
   input.value = "";
