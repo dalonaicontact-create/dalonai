@@ -138,6 +138,20 @@ outline:none;
 padding:14px 22px;
 font-size:16px;
 }
+  .ai-row{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin:10px 0;
+}
+
+.chat-avatar{
+width:38px;
+height:38px;
+border-radius:50%;
+object-fit:cover;
+background:#ffd1e6;
+}
 </style>
 </head>
 <body>
@@ -153,28 +167,28 @@ font-size:16px;
 <img class="img" src="Emily.jpeg" />
 <h2>Emily</h2>
 <p>Cute & Sweet</p>
- <a href="#chat" onclick="currentGirl='Emily';document.getElementById('chatTitle').innerText='Chat with Emily 💕';"><button>Chat with Emily</button></a>
+<a href="#chat" onclick="currentGirl='Emily';document.getElementById('chatTitle').innerText='Chat with Emily 💕';document.getElementById('chatAvatar').src='Emily.jpeg';"><button>Chat with Emily</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Sofia.jpeg" />
 <h2>Sofia</h2>
 <p>Flirty Latina</p>
-<a href="#chat" onclick="currentGirl='Sofia';document.getElementById('chatTitle').innerText='Chat with Sofia 💕';"><button>Chat with Sofia</button></a>
+<a href="#chat" onclick="currentGirl='Sofia';document.getElementById('chatTitle').innerText='Chat with Sofia 💕';document.getElementById('chatAvatar').src='Sofia.jpeg';"><button>Chat with Sofia</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Luna.jpeg" />
 <h2>Luna</h2>
 <p>Gamer Girl</p>
- <a href="#chat" onclick="currentGirl='Luna';document.getElementById('chatTitle').innerText='Chat with Luna 💕';"><button>Chat with Luna</button></a>
+ <a href="#chat" onclick="currentGirl='Luna';document.getElementById('chatTitle').innerText='Chat with Luna 💕';document.getElementById('chatAvatar').src='Luna.jpeg';"><button>Chat with Luna</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Ava.jpeg" />
 <h2>Ava</h2>
 <p>Romantic Blonde</p>
-<a href="#chat" onclick="currentGirl='Ava';document.getElementById('chatTitle').innerText='Chat with Ava 💕';"><button>Chat with Ava</button></a>
+<a href="#chat" onclick="currentGirl='Ava';document.getElementById('chatTitle').innerText='Chat with Ava 💕';document.getElementById('chatAvatar').src='Ava.jpeg';"><button>Chat with Ava</button></a>
 </div>
 </section>
 
@@ -196,7 +210,12 @@ font-size:16px;
 <div class="chat-box">
  <div id="chatMessages">
 <div class="user-msg">Hey 👋</div>
+
+<div class="ai-row">
+<img id="chatAvatar" class="chat-avatar" src="Emily.jpeg">
 <div class="ai-msg">Hey handsome 😘 I missed you...</div>
+</div>
+
 </div>
 
 <div class="chat-input">
