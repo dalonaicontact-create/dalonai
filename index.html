@@ -153,28 +153,28 @@ font-size:16px;
 <img class="img" src="Emily.jpeg" />
 <h2>Emily</h2>
 <p>Cute & Sweet</p>
-  <a href="#chat" onclick="currentGirl='Emily'"><button>Chat with Emily</button></a>
+ <a href="#chat" onclick="currentGirl='Emily';document.getElementById('chatTitle').innerText='Chat with Emily 💕';"><button>Chat with Emily</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Sofia.jpeg" />
 <h2>Sofia</h2>
 <p>Flirty Latina</p>
-<a href="#chat" onclick="currentGirl='Sofia'"><button>Chat with Sofia</button></a>
+<a href="#chat" onclick="currentGirl='Sofia';document.getElementById('chatTitle').innerText='Chat with Sofia 💕';"><button>Chat with Sofia</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Luna.jpeg" />
 <h2>Luna</h2>
 <p>Gamer Girl</p>
-  <a href="#chat" onclick="currentGirl='Luna'"><button>Chat with Luna</button></a>
+ <a href="#chat" onclick="currentGirl='Luna';document.getElementById('chatTitle').innerText='Chat with Luna 💕';"><button>Chat with Luna</button></a>
 </div>
 
 <div class="card">
 <img class="img" src="Ava.jpeg" />
 <h2>Ava</h2>
 <p>Romantic Blonde</p>
-  <a href="#chat" onclick="currentGirl='Ava'"><button>Chat with Ava</button></a>
+<a href="#chat" onclick="currentGirl='Ava';document.getElementById('chatTitle').innerText='Chat with Ava 💕';"><button>Chat with Ava</button></a>
 </div>
 </section>
 
@@ -192,8 +192,7 @@ font-size:16px;
 </div>
 </section>
 <section id="chat" style="padding:60px 20px; text-align:center;">
-<h1>Chat Demo 💕</h1>
-
+<h1 id="chatTitle">Chat with Emily 💕</h1>
 <div class="chat-box">
  <div id="chatMessages">
 <div class="user-msg">Hey 👋</div>
