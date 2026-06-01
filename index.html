@@ -198,10 +198,12 @@ function sendMessage() {
   let chatBox = document.getElementById("chatMessages");
 
  chatBox.innerHTML += "<div class='user-msg'>" + message + "</div>";
+  chatBox.scrollTop = chatBox.scrollHeight;
   messageCount++;
 
 if(messageCount >= 5){
 chatBox.innerHTML += "<div class='ai-msg'><b>DalonAI 💎:</b> Upgrade to Premium to continue chatting 💕</div><a href='#pricing'><button>Upgrade Now 💎</button></a>";
+  chatBox.scrollTop = chatBox.scrollHeight;
   return;
 }
 
@@ -218,6 +220,7 @@ chatBox.innerHTML += "<div class='ai-msg'><b>DalonAI 💎:</b> Upgrade to Premiu
 let randomReply = replies[Math.floor(Math.random() * replies.length)];
 
 chatBox.innerHTML += "<div class='ai-msg'><b>" + currentGirl + ":</b> " + randomReply + "</div>";
+    chatBox.scrollTop = chatBox.scrollHeight;
   }, 800);
 
   input.value = "";
