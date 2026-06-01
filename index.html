@@ -171,10 +171,10 @@ max-width:80%;
 <h1>Chat Demo 💕</h1>
 
 <div class="chat-box">
-  <div id="chatMessages">
-<p><b>You:</b> Hey 👋</p>
-<p><b>DalonAI 💕:</b> Hey handsome 😘 I missed you...</p>
-  </div>
+ <div id="chatMessages">
+<div class="user-msg">Hey 👋</div>
+<div class="ai-msg">Hey handsome 😘 I missed you...</div>
+</div>
 
 <input id="userInput" type="text" placeholder="Type your message..." onkeydown="if(event.key === 'Enter'){sendMessage();}" style="width:70%; padding:12px; border-radius:10px; border:1px solid #ccc;">
 <button onclick="sendMessage()">Send</button>
@@ -192,11 +192,11 @@ function sendMessage() {
 
   let chatBox = document.getElementById("chatMessages");
 
-  chatBox.innerHTML += "<p><b>You:</b> " + message + "</p>";
+ chatBox.innerHTML += "<div class='user-msg'>" + message + "</div>";
   messageCount++;
 
 if(messageCount >= 5){
-chatBox.innerHTML += "<p><b>DalonAI 💎:</b> Upgrade to Premium to continue chatting 💕</p><a href='#pricing'><button>Upgrade Now 💎</button></a>";
+chatBox.innerHTML += "<div class='ai-msg'><b>DalonAI 💎:</b> Upgrade to Premium to continue chatting 💕</div><a href='#pricing'><button>Upgrade Now 💎</button></a>";
   return;
 }
 
@@ -212,7 +212,7 @@ chatBox.innerHTML += "<p><b>DalonAI 💎:</b> Upgrade to Premium to continue cha
 
 let randomReply = replies[Math.floor(Math.random() * replies.length)];
 
-chatBox.innerHTML += "<p><b>" + currentGirl + ":</b> " + randomReply + "</p>";
+chatBox.innerHTML += "<div class='ai-msg'><b>" + currentGirl + ":</b> " + randomReply + "</div>";
   }, 800);
 
   input.value = "";
