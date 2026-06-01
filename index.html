@@ -119,6 +119,25 @@ max-height:320px;
 overflow-y:auto;
 padding-right:5px;
 }
+  .chat-input{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.chat-input input{
+flex:1;
+padding:14px;
+border-radius:14px;
+border:1px solid #ddd;
+font-size:16px;
+outline:none;
+}
+
+.chat-input button{
+padding:14px 22px;
+font-size:16px;
+}
 </style>
 </head>
 <body>
@@ -181,8 +200,10 @@ padding-right:5px;
 <div class="ai-msg">Hey handsome 😘 I missed you...</div>
 </div>
 
-<input id="userInput" type="text" placeholder="Type your message..." onkeydown="if(event.key === 'Enter'){sendMessage();}" style="width:70%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+<div class="chat-input">
+<input id="userInput" type="text" placeholder="Type your message..." onkeydown="if(event.key === 'Enter'){sendMessage();}">
 <button onclick="sendMessage()">Send</button>
+</div>
 
 </div>
 </section>
